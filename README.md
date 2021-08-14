@@ -4,7 +4,7 @@ User can log in, sign up,add their account , Check their account balance and mak
 User data is stored in json format.
 
 ### To begin
-1) Clone the project
+1) Clone the project.
 2) Check the requirement from requirements.txt
 3) Start the Ganache on your local machine
 4) Run the Init.py file to start the execution of program.
