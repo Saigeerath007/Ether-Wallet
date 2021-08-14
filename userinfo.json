@@ -58,5 +58,13 @@
         "passwd": "password123",
         "pvkey": "b8e88c3cc51ad6b40945558515adf5ffd45bcb6f4c9686ec8469801a4fb7707c",
         "nuemonic": null
+    },
+    "henda": {
+        "f_name": "Hero",
+        "l_name": "Honda",
+        "u_name": "henda",
+        "passwd": "bonda",
+        "pvkey": "6d631c8bfe338e50d8d29e49bd526377f4b5d4fbc7b679df3b4efd886745535d",
+        "nuemonic": null
     }
 }

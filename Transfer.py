@@ -19,7 +19,7 @@ class Transfer:
         self.f2 = Frame(self.root, width=1050, height=50, bg='#3399ff').place(x=0, y=0)
         self.f3 = Frame(self.root, width=1030, height=200, bg='#d6f5f5').place(x=10, y=55)
 
-        l1 = Label(self.root, text='Receiver Address', font=('roboto', 13), fg='black', bg='#d6f5f5').place(x=50, y=102)
+        l1 = Label(self.root, text='Send Ether To', font=('roboto', 13), fg='black', bg='#d6f5f5').place(x=50, y=102)
         self.receiver = Entry(self.root, width=45, fg='black', bg='white', font=(12))
         self.receiver.place(x=230, y=100, height=30)
 
@@ -40,7 +40,7 @@ class Transfer:
             x=320, y=165)
 
     def makeTransaction(self):
-        if self.amount.get() == '' or self.receiver.get() == '' or len(self.receiver.get()) == 42 :
+        if self.amount.get() == '' or self.receiver.get() == '' or len(self.receiver.get()) != 42 :
             print('Check Sender Address or Amount')
             f3 = Frame(self.root, width=350, height=40, bg='#d6f5f5').place(x=320, y=165)
             l3 = Label(self.root, text='Incorect Info', font=('roboto', 10), fg='green', bg='#d6f5f5').place(

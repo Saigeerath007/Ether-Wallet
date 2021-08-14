@@ -79,6 +79,7 @@ class Register:
 
             post_authenticated(self.root, self.data[self.u_name.get()])
 
+
 #########################################################################################################
 
 class SignIn:
@@ -125,6 +126,7 @@ class SignIn:
             # quit()
             print(self.passwd.get(), self.u_name.get(), self.data)
 
+
 #########################################################################################################
 
 
@@ -152,7 +154,7 @@ class CheckAccountScreen:
         self.pvkey.place(x=220, y=350, height=30)
 
         b2 = Button(self.root, text='Add Account', width=20, padx=5, pady=10, font=('roboto', 8), bg='orange',
-                    fg='white',command=lambda : self.move_next(),).place(x=320, y=400)
+                    fg='white', command=lambda: self.move_next(), ).place(x=320, y=400)
 
     def move_next(self):
         with open('userinfo.json', 'r') as userinfo:
@@ -168,7 +170,7 @@ class CheckAccountScreen:
         print(f'{self.pvkey.get()} added to {self.user["f_name"]}\n', self.user)
 
         self.root.quit()
-        Transfer.main()
+        Transfer.main(self.root, self.user)
 
 
 #########################################################################################################
@@ -193,8 +195,6 @@ def post_authenticated(tk, user):
         return CheckAccountScreen(root, user)
     else:
         Transfer.main(tk, user)
-
-
 
 
 log(root)
